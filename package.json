@@ -4,7 +4,7 @@
   "description": "This repository contains solution to the task for Home Day 1 of the Andela Bootcamp. Tests have also been included.",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine spec/movieViewer.spec.js"
+    "test": "jasmine spec/cinemaCustomer.spec.js"
   },
   "repository": {
     "type": "git",

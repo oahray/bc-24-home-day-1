@@ -1,6 +1,6 @@
-class cinemaCustomer {
+class CinemaCustomer {
   constructor (age) {
-    this.age = age;
+    this.age = age; 
   }
 
   getCategory() {
@@ -27,14 +27,14 @@ class cinemaCustomer {
   }
 
   canWatch () {
-    return this.getPermittedMovies(getCategory());
+    return this.getPermittedMovies(this.getCategory());
   }
 
   getTicketFee () {
-    if (this.getCategory() === 'child') {
-      return 1000;
+    if (this.getCategory() === 'adult') {
+      return 1500;
     }
-    return 1500;
+    return 1000;
   }
 
   buyTicket (cash) {
@@ -45,12 +45,21 @@ class cinemaCustomer {
   }
 };
 
-class childCustomerWithParent extends cinemaCustomer {
+class ChildCustomerWithParent extends CinemaCustomer {
   constructor (age) {
     super(age);
   }
-
+  
   getCategory () {
     return "child with parent";
   }
 };
+
+module.exports = {
+	CinemaCustomer,
+	ChildCustomerWithParent
+};
+
+let ray = new CinemaCustomer(12);
+let trey = new CinemaCustomer(22);
+let sophia = new ChildCustomerWithParent(12);
