@@ -59,7 +59,3 @@ module.exports = {
 	CinemaCustomer,
 	ChildCustomerWithParent
 };
-
-let ray = new CinemaCustomer(12);
-let trey = new CinemaCustomer(22);
-let sophia = new ChildCustomerWithParent(12);
